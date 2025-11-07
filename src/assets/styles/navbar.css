@@ -1,0 +1,123 @@
+/* Navbar*/
+.top-header {
+    background-color: var(--sn-topbar);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 50px;
+}
+
+.hamburger-btn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--sn-sidebar);
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.hamburger-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.top-header .navbar-brand {
+    font-size: 16px;
+    font-weight: 600;
+    color: white !important;
+    margin: 0;
+}
+
+.top-header .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+    font-size: 13px;
+    padding: 0 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid transparent;
+}
+
+.top-header .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-bottom-color: var(--sn-primary);
+    color: white;
+}
+
+.top-header .nav-link.active {
+    color: white !important;
+    border-bottom-color: var(--sn-primary);
+    background-color: rgba(255,255,255,0.05);
+}
+
+.search-box {
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    width: 350px;
+    font-size: 13px;
+    padding: 6px 15px;
+}
+
+.search-box::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.search-box:focus {
+    background-color: rgba(255,255,255,0.15);
+    border-color: var(--sn-primary);
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+
+.header-icon {
+    color: rgba(255,255,255,0.8);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.header-icon:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: #ff5630;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: var(--sn-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}

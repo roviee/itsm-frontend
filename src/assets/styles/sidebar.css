@@ -1,0 +1,68 @@
+/* Sidebar */
+.sidebar-container {
+  display: flex;
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  width: var(--sidebar-width);
+  height: calc(100vh - 50px);
+  background-color: var(--sn-sidebar);
+  z-index: 900;
+  overflow-y: auto;
+}
+        
+.sidebar .nav-link {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 0;
+  color: rgba(255,255,255,0.7);
+  background: transparent;
+  font-size: 20px;
+  padding: 0;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar .nav-link:hover .sidebar-icon {
+  color: white;
+}
+
+/* 🔹 Nested Sidebar - Sticky Scrollable */
+.nested-sidebar {
+  position: sticky;
+  top: 0;
+  margin-left: 50px;
+  margin-top: 50px;
+  height: calc(100vh - 50px); 
+  background-color: var(--sn-sidebar);
+  overflow-y: auto;
+  transition: width 0.4s ease, opacity 0.3s ease;
+  padding-bottom: 1rem;
+}
+
+/* Header inside nested sidebar */
+.nested-header {
+  position: sticky;
+  top: 0;
+  background: var(--sn-sidebar);
+  z-index: 1051;
+  height: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional smooth scrollbar */
+.nested-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.nested-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}

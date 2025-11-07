@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --sn-primary: #00BCD4;
+    --sn-secondary: #00BCD4;
+    --sn-bg: #032D42;
+    --sn-dark: #2c3e50;
+    --sn-sidebar: #032D42;
+    --sn-sidebar-hover: #81b5a1;
+    --sn-topbar: #032D42;
+    --sn-border: #e5e5e5;
+    --sn-hover: #f5f5f5;
+    --sn-text: #293e40;
+    --sn-button-hover: #00ACC1;
+    --sidebar-width: 50px;
+}
+body {
+    /* font-family:  "Lato", Arial, sans-serif !important; */
+
+   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; 
+   background-color: #f7f9fa;
+   color: var(--sn-text);
+   margin: 0;
+   font-size: 14px !important;
+}
+a {
+    color: var(--sn-primary);
+}
