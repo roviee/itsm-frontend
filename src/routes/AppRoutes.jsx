@@ -6,16 +6,15 @@ import LoginPage from "../pages/LoginPage";
 import AdminLayout from "../layouts/AdminLayout";
 import AdminDashboard from "../pages/admin/DashboardPage";
 import AllTickets from "../pages/admin/AllTickets";
-import IncidentForm from "../pages/admin/incident/IncidentForm"
 
 import StaffLayout from "../layouts/StaffLayout"
 import StaffDashboard from "../pages/staff/DashboardPage";
-import IncidentDetails from "../pages/staff/incident/IncidentDetails"
 
 import EmployeeLayout from "../layouts/EmployeeLayout";
 import HomePage from "../pages/employee/HomePage";
 import MyTicket from "../pages/employee/MyTicket";
-import TicketDetails from "../pages/employee/TicketDetails";
+
+import TicketDetails from "../components/common/Form/TicketDetails";
 
 
 import Unauthorized from "../pages/Unauthorized";
@@ -34,7 +33,7 @@ const AppRoutes = () => {
       >
         <Route path="dashboard" element={<AdminDashboard />} />
         <Route path="incidents" element={<AllTickets />} />
-        <Route path="tickets/:id" element={<IncidentForm />} />
+        <Route path="tickets/:id" element={<TicketDetails />} />
       </Route>
       
       <Route 
@@ -46,7 +45,7 @@ const AppRoutes = () => {
         }
       >
         <Route path="dashboard" element={<StaffDashboard />} />
-        <Route path="tickets/:id" element={<IncidentDetails />} />
+        <Route path="tickets/:id" element={<TicketDetails />} />
       </Route>
 
       <Route
