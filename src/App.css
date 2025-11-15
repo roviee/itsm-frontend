@@ -1,6 +1,7 @@
 @import './index.css';
 @import './assets/styles/navbar.css';
 @import './assets/styles/sidebar.css';
+@import './assets/styles/layout.css';
 
 .bg-login {
   background-color: var(--sn-bg);
@@ -20,11 +21,6 @@
 .fs-font-subItem {
   font-size: 12.5px !important; 
   color: #B0BAC5 !important;
-}
-
-.main-content {
-  /* margin-left: 315px; */
-  margin-top: 50px;
 }
 
 .bg-nested-sidebar {
@@ -160,30 +156,7 @@
   font-size: 12px;
   margin-top: 8px;
 }
-.main-content {
-  transition: width 0.4s ease, opacity 0.3s ease;
-  overflow: hidden;
-}
-.main-content.closed {
-  width: 0;
-  opacity: 0;
-}
-.main-content.open {
-  width: 40vh;
-  opacity: 1;
-}
-.content-wrapper {
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-.main-content.closed .content-wrapper {
-  opacity: 0;
-  transform: translateX(-20px);
-  pointer-events: none;
-}
-.main-content.open .content-wrapper {
-  opacity: 1;
-  transform: translateX(0);
-}
+
 /* Sidebar animation  */
 .sidebar-root {
   top: 0;

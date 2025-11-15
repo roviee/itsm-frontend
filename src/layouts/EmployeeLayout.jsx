@@ -7,13 +7,13 @@ export default function EmployeeLayout() {
   const { role } = useAuth();
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="layout-root">
       {/* Pass the toggle function to Navbar */}
       <Navbar role={role} />
 
-      <div className="d-flex flex-grow-1">
+      <div className="layout-body">
         {/* Main content area */}
-        <div className="main-content flex-grow-1 overflow-auto">
+        <div className="main-content">
           <Outlet />
         </div>
       </div>
