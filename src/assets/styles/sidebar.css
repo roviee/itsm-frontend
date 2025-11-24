@@ -41,7 +41,7 @@
   top: 0;
   margin-left: 50px;
   margin-top: 50px;
-  height: calc(100vh - 50px); 
+  max-height: calc(100vh - 50px);
   background-color: var(--sn-sidebar);
   overflow-y: auto;
   transition: width 0.4s ease, opacity 0.3s ease;
