@@ -4,7 +4,7 @@ export const ticketFields = (ticket, role, userStaffList = [], updateData) => {
   // Row 1
     const fields = [
     [
-      { label: "Number", id: "number", value: "CHG0030004" },
+      { label: "Number", id: "number", value: ticket.ticketNumber},
       {
         label: "State",
         id: "state",
@@ -53,7 +53,7 @@ export const ticketFields = (ticket, role, userStaffList = [], updateData) => {
         options: [
           { label: "-- None --", value: "" },
           ...userStaffList.map((user) => ({
-            label: user.fullname,
+            label: user.email,
             value: user.id,
           })),
         ],

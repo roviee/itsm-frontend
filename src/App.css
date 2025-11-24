@@ -40,7 +40,7 @@
 .custom-table-wrapper {
   max-height: 490px;
   overflow-y: auto;
-}
+} 
 
 /* Compact but readable font size */
 .table {
@@ -50,7 +50,20 @@
 /* Balanced padding */
 .table th,
 .table td {
-  padding: 8px 10px !important;
+  /* padding: 8px 10px !important; */
+  border-bottom-width: 0 !important;
+}
+.table-wrapper {
+  max-height: 500px;         /* Set desired scroll height */
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.table-wrapper thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;               /* Keep header above tbody */
+  background: #f8f9fa;       /* Match Bootstrap .table-light */
 }
 
 /* Subtle hover effect */

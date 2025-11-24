@@ -4,12 +4,13 @@ import { useFetchData } from "../../hooks/useFetchData";
 export default function StaffDashboard() {
   const { data: tickets, loading, error } = useFetchData("/api/v1/tickets");
   const columns = [
+    { header: "Task", accessor: "ticketNumber" },
     { header: "Short Description", accessor: "title" },
-    { header: "Caller", accessor: "createdBy.fullname" },
-    { header: "Priority", accessor: "priority" },
-    { header: "Category", accessor: "category" },
     { header: "State", accessor: "status" },
     { header: "Assigned To", accessor: "assignedTo.fullname" },
+    { header: "Priority", accessor: "priority" },
+    { header: "Caller", accessor: "createdBy.fullname" },
+    { header: "Category", accessor: "category" },
     { header: "Created At", accessor: "createdAt" },
   ];
 

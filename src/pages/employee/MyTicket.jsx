@@ -33,6 +33,7 @@ export default function MyTicket() {
       if (response.ok) {
         const result = await response.json();
         console.log("Ticket submitted:", result);
+        alert("Ticket successfully submit")
       } else {
         console.error("Failed to submit ticket");
       }
