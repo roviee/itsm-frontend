@@ -1,6 +1,7 @@
 export const ticketFields = (ticket, role, userStaffList = [], updateData) => {
   const isAdmin = role === "ADMIN";
   const isStaff = role === "SUPPORT_STAFF";
+  const isEmployee = role === "EMPLOYEE";
   // Row 1
     const fields = [
     [
@@ -10,8 +11,8 @@ export const ticketFields = (ticket, role, userStaffList = [], updateData) => {
         id: "state",
         name: "status",
         value: ticket.status,
-        isSelect: isStaff || isAdmin, // dropdown only for staff
-        disabled: !(isStaff || isAdmin),
+        isSelect: isStaff || isAdmin || isEmployee,
+        disabled: !(isStaff || isAdmin || isEmployee),
         options: [
           { label: "Open", value: "OPEN" },
           { label: "In Progress", value: "IN_PROGRESS" },

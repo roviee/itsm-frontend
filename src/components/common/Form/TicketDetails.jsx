@@ -109,7 +109,7 @@ export default function TicketDetails() {
                 </span>
               </div>
             </div>
-            {(role === "SUPPORT_STAFF" || role === "ADMIN") && (
+            {(role === "EMPLOYEE" ||  role === "SUPPORT_STAFF" || role === "ADMIN") && (
               <div className="col-auto">
                 <button className="btn-sn-primary me-2" onClick={handleUpdate}>
                   Update
