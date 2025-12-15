@@ -8,7 +8,7 @@ const statusMap = {
 const priorityMap = {
   CRITICAL: "🔴 1 - Critical",
   HIGH: "🟠 2 - High",
-  MODERATE: "🟡 3 - Medium",
+  MODERATE: "🟡 3 - Moderate",
   LOW: "🔵 4 - Low",
 };
 
