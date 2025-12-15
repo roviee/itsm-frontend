@@ -1,3 +1,11 @@
+export const ROLES = {
+  EMPLOYEE: "EMPLOYEE",
+  STAFF: "SUPPORT_STAFF",
+  ADMIN: "ADMIN",
+};
+
+const PRIVILEGED_ROLES = [ROLES.STAFF, ROLES.ADMIN];
+
 const statusMap = {
   OPEN: "Open",
   IN_PROGRESS: "In Progress",
@@ -36,4 +44,4 @@ const getNestedValue = (obj, path) => {
   return value !== undefined && value !== null ? value : "(empty)";
 };
 
-export {formatPriority, formatStatus, formatDate, getNestedValue, formattedDate}
+export {formatPriority, formatStatus, formatDate, getNestedValue, formattedDate, PRIVILEGED_ROLES}
