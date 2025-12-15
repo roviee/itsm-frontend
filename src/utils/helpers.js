@@ -20,6 +20,15 @@ const formatDate = (value) => {
   return new Date (value).toLocaleString();
 }
 
+const formattedDate = () => {
+  return new Date().toLocaleDateString('en-US', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  });
+}
+
 const getNestedValue = (obj, path) => {
   const value = path
     .split(".")
@@ -27,4 +36,4 @@ const getNestedValue = (obj, path) => {
   return value !== undefined && value !== null ? value : "(empty)";
 };
 
-export {formatPriority, formatStatus, formatDate, getNestedValue}
+export {formatPriority, formatStatus, formatDate, getNestedValue, formattedDate}
