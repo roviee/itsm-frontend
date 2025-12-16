@@ -6,16 +6,15 @@
 }
 
 .layout-body {
-  display: flex;
-  flex-grow: 1;
-  min-height: 0;
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+  transition: margin-left 0.3s ease; 
 }
 
 /* Main content */
 .main-content {
   transition: width 0.3s ease, opacity 0.3s ease;
   flex-grow: 1; 
-  overflow-y: auto;
   min-height: 0;
-  padding-top: 50px;
 }

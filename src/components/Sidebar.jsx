@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -15,24 +15,30 @@ import {
   LogOut,
 } from "lucide-react";
 
-function Sidebar() {
+function Sidebar({ onNestedToggle }) {
   const { role, logout } = useAuth();
   const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState("dashboard");
-
   const [isContentOpen, setIsContentOpen] = useState(false);
+
+  const toggleContent = () => {
+    setIsContentOpen((prev) => {
+      const next = !prev;
+      if (typeof onNestedToggle === "function") onNestedToggle(next);
+      return next;
+    });
+  };
 
   const handleMenuClick = (id) => {
     if (activeMenu === id && isContentOpen) {
-      // clicking same icon closes content
       setIsContentOpen(false);
+      if (onNestedToggle) onNestedToggle(false);
     } else {
       setActiveMenu(id);
       setIsContentOpen(true);
+      if (onNestedToggle) onNestedToggle(true);
     }
   };
-
-  const toggleContent = () => setIsContentOpen(!isContentOpen);
 
   const handleLogout = () => {
     logout();
@@ -95,7 +101,7 @@ function Sidebar() {
       <div
         className="nested-sidebar "
         style={{
-          width: isContentOpen ? "40vh" : "0",
+          width: isContentOpen ? "260px" : "0",
           opacity: isContentOpen ? 1 : 0,
         }}
       >

@@ -1,18 +1,17 @@
 /* Sidebar */
 .sidebar-container {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
   display: flex;
-  position: relative;
+  z-index: 900;
 }
 
 .sidebar {
-  position: fixed;
-  left: 0;
-  top: 50px;
-  width: var(--sidebar-width);
-  height: calc(100vh - 50px);
+  width: 50px;
+  height: 100%;
   background-color: var(--sn-sidebar);
-  z-index: 900;
-  overflow-y: auto;
 }
         
 .sidebar .nav-link {
@@ -37,15 +36,11 @@
 
 /* 🔹 Nested Sidebar - Sticky Scrollable */
 .nested-sidebar {
-  position: sticky;
-  top: 0;
-  margin-left: 50px;
-  margin-top: 50px;
-  max-height: calc(100vh - 50px);
+  width: 0;
+  height: 100%;
   background-color: var(--sn-sidebar);
   overflow-y: auto;
-  transition: width 0.4s ease, opacity 0.3s ease;
-  padding-bottom: 1rem;
+  transition: width 0.3s ease, opacity 0.3s ease;
 }
 
 /* Header inside nested sidebar */

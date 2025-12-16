@@ -3,11 +3,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import ProtectedRoute from "../components/ProtectedRoute";
 import LoginPage from "../pages/LoginPage";
 
-import AdminLayout from "../layouts/AdminLayout";
 import AdminDashboard from "../pages/admin/DashboardPage";
 import AllTickets from "../pages/admin/AllTickets";
 
-import StaffLayout from "../layouts/StaffLayout"
+import AuthorizedLayout from "../layouts/AuthorizedLayout"
 import StaffDashboard from "../pages/staff/DashboardPage";
 
 import EmployeeLayout from "../layouts/EmployeeLayout";
@@ -27,7 +26,7 @@ const AppRoutes = () => {
         path="/admin/*"
         element={
           <ProtectedRoute allowedRoles={["ADMIN"]}>
-            <AdminLayout />
+            <AuthorizedLayout />
           </ProtectedRoute>
         }
       >
@@ -40,7 +39,7 @@ const AppRoutes = () => {
         path="/staff/*"
         element={
           <ProtectedRoute allowedRoles={["SUPPORT_STAFF"]}>
-            <StaffLayout />
+            <AuthorizedLayout />
           </ProtectedRoute>
         }
       >
